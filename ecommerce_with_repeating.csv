@@ -1,0 +1,51 @@
+order_id,user_id,product_id,product_name,category,quantity,price,order_date,rating,is_repeating_customer
+1001,501,301,Wireless Mouse,Electronics,1,599,2024-01-03 10:15,4,True
+1002,502,302,Gaming Keyboard,Electronics,1,1499,2024-01-03 11:20,5,True
+1003,501,303,USB-C Cable,Accessories,2,199,2024-01-03 14:10,4,True
+1004,503,304,Phone Case,Accessories,1,299,2024-01-04 16:30,5,False
+1005,504,305,LED Monitor 24inch,Electronics,1,7999,2024-01-04 18:45,4,False
+1006,505,306,Laptop Stand,Accessories,1,899,2024-01-05 09:00,5,False
+1007,506,307,Noise Cancelling Headphones,Electronics,1,2999,2024-01-05 10:45,4,False
+1008,507,308,Smart Watch,Electronics,1,3999,2024-01-05 11:30,3,False
+1009,508,309,Cotton T-Shirt,Fashion,2,499,2024-01-05 12:20,5,False
+1010,509,310,Running Shoes,Fashion,1,1999,2024-01-06 13:00,4,False
+1011,510,311,Backpack,Accessories,1,1299,2024-01-06 14:55,5,False
+1012,511,312,Desk Lamp,Home,1,699,2024-01-06 15:40,4,False
+1013,502,303,USB-C Cable,Accessories,1,199,2024-01-07 10:10,5,True
+1014,512,315,Power Bank 10000mAh,Electronics,1,1099,2024-01-07 12:30,4,False
+1015,513,316,Bluetooth Speaker,Electronics,1,1499,2024-01-07 13:45,5,False
+1016,514,317,Notebook,Stationery,3,99,2024-01-08 09:15,4,False
+1017,515,318,Gel Pen Pack,Stationery,2,49,2024-01-08 10:50,5,False
+1018,516,319,Table Organizer,Home,1,399,2024-01-08 11:40,4,False
+1019,517,320,Water Bottle,Home,1,299,2024-01-08 12:30,5,False
+1020,518,301,Wireless Mouse,Electronics,1,599,2024-01-09 14:00,4,False
+1021,519,302,Gaming Keyboard,Electronics,1,1499,2024-01-09 15:20,4,False
+1022,520,321,Sunglasses,Fashion,1,799,2024-01-09 16:10,5,False
+1023,521,322,Jeans,Fashion,1,1299,2024-01-09 17:05,4,False
+1024,522,323,Formal Shirt,Fashion,1,999,2024-01-09 18:25,5,False
+1025,523,324,Hoodie,Fashion,1,1499,2024-01-10 10:15,5,False
+1026,524,325,Hair Dryer,Electronics,1,999,2024-01-10 11:00,4,False
+1027,525,326,Trimmer,Electronics,1,1299,2024-01-10 12:20,5,False
+1028,526,327,Electric Kettle,Home,1,999,2024-01-10 14:35,4,False
+1029,527,328,Air Freshener,Home,2,199,2024-01-10 15:45,3,False
+1030,528,329,Wireless Charger,Electronics,1,899,2024-01-11 09:00,5,False
+1031,529,330,Car Phone Holder,Accessories,1,399,2024-01-11 10:30,4,False
+1032,530,331,Tripod Stand,Accessories,1,799,2024-01-11 11:40,5,False
+1033,531,332,Face Cream,Beauty,1,499,2024-01-11 13:10,4,False
+1034,532,333,Sunscreen Lotion,Beauty,1,299,2024-01-11 14:25,5,False
+1035,533,334,Lip Balm,Beauty,1,199,2024-01-11 15:00,4,False
+1036,534,335,Deodorant,Beauty,1,299,2024-01-11 16:40,5,False
+1037,535,336,Shampoo,Beauty,1,399,2024-01-11 17:45,4,False
+1038,536,337,Hair Oil,Beauty,1,199,2024-01-11 18:30,5,False
+1039,537,338,Running Shorts,Fashion,1,799,2024-01-12 09:00,4,False
+1040,538,339,Wireless Earbuds,Electronics,1,2499,2024-01-12 10:20,5,False
+1041,539,340,Cooking Pan,Home,1,999,2024-01-12 11:15,4,False
+1042,540,341,Blender Grinder,Home,1,1999,2024-01-12 12:30,5,False
+1043,541,342,Photo Frame,Home,1,299,2024-01-12 14:00,4,False
+1044,542,343,Wall Clock,Home,1,499,2024-01-12 15:25,5,False
+1045,543,344,Coffee Mug,Home,2,199,2024-01-12 16:40,4,False
+1046,544,345,Study Table,Home,1,4999,2024-01-13 10:00,5,False
+1047,545,346,Office Chair,Home,1,6999,2024-01-13 11:20,4,False
+1048,546,347,Perfume,Beauty,1,899,2024-01-13 12:15,5,False
+1049,547,348,Towel Set,Home,1,599,2024-01-13 13:45,4,False
+1050,548,349,Matress Topper,Home,1,2999,2024-01-13 15:30,5,False
