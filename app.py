@@ -2,9 +2,14 @@ import streamlit as st
 import pandas as pd
 import os
 import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 # 1. Page Config
 st.set_page_config(page_title="Pro E-Commerce Dashboard", layout="wide", page_icon="🛒")
+
+# Set Seaborn Style
+sns.set_theme(style="whitegrid")
 
 # 2. Data Loader
 @st.cache_data
@@ -106,22 +111,45 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📈 Revenue Trend")
     daily = df.groupby("order_day", as_index=False)["revenue"].sum()
- 
+    
+    # Matplotlib/Seaborn Line Chart
+    fig, ax = plt.subplots(figsize=(10, 5))
+    sns.lineplot(data=daily, x="order_day", y="revenue", marker='o', ax=ax)
+    ax.set_ylabel("Revenue")
+    ax.set_xlabel("Date")
+    plt.xticks(rotation=45)
+    st.pyplot(fig)
+
 with col2:
     st.subheader("🥧 Revenue by Category")
     cat_rev = df.groupby("category", as_index=False)["revenue"].sum()
-  
+    
+    # Matplotlib Pie Chart
+    fig, ax = plt.subplots(figsize=(6, 6))
+    ax.pie(cat_rev["revenue"], labels=cat_rev["category"], autopct="%1.1f%%", startangle=140)
+    st.pyplot(fig)
+
 # ROW 2: More Charts
 col3, col4 = st.columns([2, 1])
 
 with col3:
     st.subheader("🏆 Top 5 Products")
     top = df.groupby("product_name", as_index=False)["revenue"].sum().sort_values("revenue", ascending=False).head(5)
-
+    
+    # Seaborn Bar Chart
+    fig, ax = plt.subplots(figsize=(10, 5))
+    sns.barplot(data=top, x="revenue", y="product_name", ax=ax, palette="viridis")
+    ax.set_xlabel("Revenue")
+    ax.set_ylabel("Product Name")
+    st.pyplot(fig)
 
 with col4:
     st.subheader("⏰ Peak Hours")
     hourly = df.groupby("order_hour", as_index=False)["order_id"].count()
-    fig = px.area(hourly, x="order_hour", y="order_id")
-    st.plotly_chart(fig, use_container_width=True)
-
+    
+    # Seaborn Bar Chart for Hours
+    fig, ax = plt.subplots(figsize=(6, 5))
+    sns.barplot(data=hourly, x="order_hour", y="order_id", ax=ax, palette="magma")
+    ax.set_xlabel("Hour of Day")
+    ax.set_ylabel("Number of Orders")
+    st.pyplot(fig)
