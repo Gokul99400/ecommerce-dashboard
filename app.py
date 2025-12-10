@@ -1,6 +1,5 @@
 import streamlit as st
 import pandas as pd
-import plotly.express as px
 import os
 import numpy as np
 
@@ -107,26 +106,22 @@ col1, col2 = st.columns(2)
 with col1:
     st.subheader("📈 Revenue Trend")
     daily = df.groupby("order_day", as_index=False)["revenue"].sum()
-    fig = px.line(daily, x="order_day", y="revenue", markers=True)
-    st.plotly_chart(fig, use_container_width=True)
-
+ 
 with col2:
     st.subheader("🥧 Revenue by Category")
     cat_rev = df.groupby("category", as_index=False)["revenue"].sum()
-    fig = px.pie(cat_rev, values="revenue", names="category", hole=0.4)
-    st.plotly_chart(fig, use_container_width=True)
-
+  
 # ROW 2: More Charts
 col3, col4 = st.columns([2, 1])
 
 with col3:
     st.subheader("🏆 Top 5 Products")
     top = df.groupby("product_name", as_index=False)["revenue"].sum().sort_values("revenue", ascending=False).head(5)
-    fig = px.bar(top, x="revenue", y="product_name", orientation='h', color="revenue")
-    st.plotly_chart(fig, use_container_width=True)
+
 
 with col4:
     st.subheader("⏰ Peak Hours")
     hourly = df.groupby("order_hour", as_index=False)["order_id"].count()
     fig = px.area(hourly, x="order_hour", y="order_id")
     st.plotly_chart(fig, use_container_width=True)
+
